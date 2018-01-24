@@ -53,12 +53,18 @@ public class BlurIt {
 
 
         Allocation inputallocation= Allocation.createFromBitmap(rs,input);
-        Allocation outputallocation= Allocation.createFromBitmap(rs,output);
+        Allocation blurAllocation= Allocation.createFromBitmap(rs,output);
         intrinsicBlur.setRadius(intensity);
         intrinsicBlur.setInput(inputallocation);
-        intrinsicBlur.forEach(outputallocation);
+        intrinsicBlur.forEach(blurAllocation);
 
-        outputallocation.copyTo(output);
+        blurAllocation.copyTo(output);
+
+
+        inputallocation.destroy();
+        blurAllocation.destroy();
+        intrinsicBlur.destroy();
+        rs.destroy();
 
         return output;
     }
