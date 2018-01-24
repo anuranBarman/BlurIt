@@ -10,6 +10,15 @@ BlurIt.with(getApplicationContext()).intensity(25).Async(true).load(R.drawable.b
 ```java
 BlurIt.with(getApplicationContext()).intensity(25).Async(true).load(R.drawable.background).into((ImageView)findViewById(R.id.image));
 ```
+add this to your app level gradle file
+```
+defaultConfig {
+    ...
+    renderscriptTargetApi 19
+    renderscriptSupportModeEnabled true
+}
+
+```
 #### If `Async` options is set to `true` then blurring will be done asyncronously.
 #### Set `intensity` to control the blurring. `MAX_RADIUS` is 25.
 
