@@ -14,7 +14,7 @@ add this to your app level gradle file
 ```
 defaultConfig {
     ...
-    renderscriptTargetApi 19
+    renderscriptTargetApi 18
     renderscriptSupportModeEnabled true
 }
 
