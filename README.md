@@ -14,3 +14,4 @@ BlurIt.with(getApplicationContext()).intensity(25).Async(true).load(R.drawable.b
 #### Set `intensity` to control the blurring. `MAX_RADIUS` is 25.
 
 ## Screenshot:
+![Screenshot](https://github.com/anuranBarman/BlurIt/blob/master/screenshot.png "Blurred Background")
