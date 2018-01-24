@@ -10,7 +10,23 @@ BlurIt.with(getApplicationContext()).intensity(25).Async(true).load(R.drawable.b
 ```java
 BlurIt.with(getApplicationContext()).intensity(25).Async(true).load(R.drawable.background).into((ImageView)findViewById(R.id.image));
 ```
-add this to your app level gradle file
+##### add this to your project level gradle file
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+##### add this to your app level gradle file
+```
+    dependencies {
+	        compile 'com.github.anuranBarman:BlurIt:0.1.1'
+	}
+```
+
+##### add this to your app level gradle file
 ```
 defaultConfig {
     ...
