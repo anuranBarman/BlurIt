@@ -4,14 +4,14 @@ simple android library to blur background bitmaps or drawables.
 ## Usage:
 1. With Bitmap
 ```java
-BlurIt.with(getApplicationContext()).intensity(25).Async(true).load(R.drawable.background).into((ImageView)findViewById(R.id.image));
+BlurIt.with(getApplicationContext()).intensity(25).Async(true).load(bitmap).into((ImageView)findViewById(R.id.image));
 ```
 2. With Drawable Resource
 ```java
 BlurIt.with(getApplicationContext()).intensity(25).Async(true).load(R.drawable.background).into((ImageView)findViewById(R.id.image));
 ```
 ##### add this to your project level gradle file
-```
+```java
 	allprojects {
 		repositories {
 			...
@@ -20,14 +20,14 @@ BlurIt.with(getApplicationContext()).intensity(25).Async(true).load(R.drawable.b
 	}
 ```
 ##### add this to your app level gradle file
-```
+```java
     dependencies {
 	        compile 'com.github.anuranBarman:BlurIt:0.1.1'
 	}
 ```
 
 ##### add this to your app level gradle file
-```
+```java
 defaultConfig {
     ...
     renderscriptTargetApi 18
